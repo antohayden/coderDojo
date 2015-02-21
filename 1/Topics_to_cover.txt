@@ -1,0 +1,41 @@
+-Initially set up everyone with Notepad++ on their machines. Generally available from USB keys as ITB won't allow
+	.exe downloads. Perhaps explain the general difference between a text editor and a word processor.
+
+-Have students create a folder on desktop to contain all content done in the classes.
+-create a sub folder for "lessons" (another will be made later to hold their website)
+
+-Save a blank new file as html in their newly created folder to enable text highlighting.
+-Create a "hello world" web page
+
+
+-Topics for discussion: (No need to get bogged down in too much detail)
+	-What is a browser?
+	-What is a webpage/website?
+	-What is HTML and CSS?
+	-What is an opening/closing tag?
+
+-Introduce simple tags: (CSS will be introduced in second class, for now, inline styling or style tags will do)
+	<html>
+
+	<head>
+	<title>
+	<style>
+
+	<body>
+	-heading tags <h1> -> <h6>
+	<p>
+	<img>
+	<br>
+	<a>
+	
+I would recommend showing some very simple styles if time allows such as background colour/text size/text colour.
+
+At the end of the 2 hours, the student should:
+	-understand a little about how their web browser works
+	-know how to create a blank html page
+	-understand what a tag is/is used for
+	-understand the basic sections (head/body) of the page and their use
+	-how to add tags mentioned above to their page (allow them some time and freedom to play with styles/sizes of 
+	 page elements. Helps to get used to things)
+
+

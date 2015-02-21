@@ -1,0 +1,29 @@
+body
+{
+	font-family:  Comic Sans MS;
+	background-color: grey;		
+}
+
+
+#section1
+{
+	background-color: #F5BCA9;
+	height:200px;
+	width: 300px;
+	border: 1px solid red; 	
+}
+
+#section2
+{
+	background-color: #F781D8;
+	width:80%;  /* percentage of screen width */
+	height:80px;	
+
+}
+
+#section3
+{	
+	background-color: #00FF40;
+	height:140px;
+	width:600px;
+}

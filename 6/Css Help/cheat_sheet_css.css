@@ -1,0 +1,97 @@
+
+/*	Changes to the background 	*/
+#myBackground
+{
+	background-color:red;		/*	Maybe could use  hex number? e.g #b0c4de */
+	background-image:url('paper.bmp');	/*set image as background */
+	background-repeat:repeat-x;	/*	Repeat the image only horizontally... what happens if I 
+									replace repeat-x with repeat-y? */
+	background-repeat:no-repeat; /*	only display image once */
+	background-position: right top;	/* 	Place image right and top ( try changing position ) */
+	background-attachment:fixed;	/*	Stops picture moving when scrolling down page */
+
+}
+
+/*	Ways to change text 		*/
+
+#myTextSize
+{
+	font-family: Arial;	/* Change the style of your font ( Check your Word Processor for fonts! ) */
+	font-size: 16px;	/* Change the size of your text */
+	text-align: center; /* sets your text to centre of available space*/
+	font-weight: Bold;	/* Makes your text heavier */
+	font-style: italic;	/* Slants the text */
+	color: red;			/* Sets the color of your text, you could use a hex value e.g #AABB11 */
+	text-indent: 25px;	/*works like tab to move text along */
+	text-transform: uppercase; /* Puts all the letters in caps ( try keywords; lowercase and capitalize! ) */
+	letter-spacing: 2px ;	/* how much space is between letters */
+	padding-left: 2cm;	/* move text in from the left by amount. Try right/bottom/top and different size types! */
+}
+/* 	Many things in your web page may need to be resized such as pictures 
+*	or divs ( to divide your page ). CSS will accept many ways of 
+*	measuring size such as 10px or 10%. Simply use height and width but 
+*	be careful!!. 
+*		Using a percentage is "relative" ( It relies on something else )
+*	which means that if you give something a 100% width, for example, it 
+*	will only be 100% the width of the div it is inside. (In other words, 
+* 	it "relies" on how wide it's containing Div is, or if it's not inside a 
+*	div how wide the browser window is.
+*	Try using percentages and px, then resize your window and see if there 
+*	is a difference 	*/
+
+#myPositionAndSize
+{
+	height: 800px;	/* set height */
+	width: 100%;	/* set width */
+	float: right;	/*	div aligns to right */
+	overflow: scroll; /* adds a scroll bar if the div content is too long */
+	overflow: hidden; /* hides any text that goes outside div size */
+	z-index: -1;		/* Move behind another layer */
+}
+
+/* changing how a link might look. Here we use a class instead of an Id*/
+/* Notice the ':' between the words. The heyword "hover" means anytime we hover
+/* over the text the style we write will be used. Same for others following it.
+*/
+
+#myBorderStyle
+{
+	border-style: solid;	/* solid border line. Try "dotted", "dashed", "double"
+							/* "groove", "ridge", "inset", "outset", "hidden" */
+	border-width: medium;	/* Thickness of border line, try using a px value! */
+	border-top-width: 10px;	/* Thickness of only top. You can replace top with left, right or bottom*/
+	border-color: red;		/* Colour of the border. Try a Hex value! */
+	border-color: red, blue;/* Color top & bottom red, sides blue */
+	border-color: red, blue, yellow; /* top, bottom, sides */
+	border-color: red, blue, yellow, green; /* top, right, bottom, left */
+	/* if I can do this with border colours, can I do this with border styles????	*/
+
+}
+
+.myLinks:hover 	
+{
+	color:yellow;	/* colour of link text */
+	font-weight: Bold;
+	text-decoration: underline;	/* underline on text when you hover over it */
+}
+
+/*	What a regular link looks like */
+.myLinks:link 
+{
+	text-decoration: none;	/* no underline on link text */
+	color:blue;
+}
+/*if we used the ":visited" and ":active" what happens? */
+
+/*Maybe you want to change the mouse cursor over a piece of text? */
+
+#changeCursor
+{
+	cursor: default;	/* normal */
+	cursor: crosshair; /*shows a cross hair when hovering */
+	cursor: auto; 		/*text selector */
+	/* 	Try these : e-resize; help; move; n-resize; ne-resize; nw-resize; pointer; progress;
+		s-resize; se-resize; sw-resize; text; w-resize; wait	*/
+}
+
+

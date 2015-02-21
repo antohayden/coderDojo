@@ -1,0 +1,619 @@
+﻿<html> 
+  <head> 
+    <meta charset="utf-8" />
+    <title>Lesson: HTML/CSS Day 1</title>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Tangerine" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" rel="stylesheet" type="text/css" media="projection, screen"/>
+ 
+  </head> 
+  <body> 
+  
+  <div id="info">
+    <p>Press <span class="key">&rarr;</span> key to advance. Zoom in/out: <span class="key">Ctrl or Command</span> + <span class="key">+/-</span>. </p>
+  </div>
+  
+  <div id="presentation">
+  
+   <div id="presentation-counter"></div>
+      
+   <div id="slides">
+   
+    
+    
+    <div class="slide section"> 
+     <header><h1>HTML</h1></header>
+	 <h4> Introduction to Divs</h4>
+    </div> 
+   
+
+    <div class="slide normal"> 
+     <header><h1>Areas of a web page</h1></header> 
+     <section class="content"> 
+		  <h1 class="slideStatement center">Normally we like to divide our web page into 
+		certain areas</h1>
+			<div id="sectionExample">
+				<div id="headingExample">Heading</div>
+				<div id="bodyExample">
+					<div id="columnExample">
+						<span>home</span><br/><br/>
+						<span>about</span><br/><br/>
+						<span>examples</span><br/><br/>
+						<span>photos</span><br/><br/>
+					</div>
+					<div id="contentExample">
+						<div class="slideStatement center">My Home page!</div>
+					</div>
+				</div>
+			
+			</div>
+     </section>
+    </div>
+	
+	    <div class="slide normal"> 
+     <header><h1>Block &amp; Inline Elements</h1></header> 
+     <section class="content">
+		<span class="slideStatement">Most elements in HTML fall into two different types</span>
+		
+		<ul class="listItems">
+			<li>Inline</li>
+			<li>Block</li>
+			<br/>
+			<br/>
+			<br/>
+			<div class="center underline">First lets look at inline elements!
+		</ul>
+		
+	 </section>
+    </div>
+	
+	<div class="slide normal"> 
+     <header><h1>How to Elements behave on an HTML page?</h1></header> 
+	  <section class="content"> 
+	 
+	 <ul class="slideStatement">
+		 <li>These elements fall onto the page just like words in a book</li>
+		 <li>They start at the top left and move along until the top is full</li>
+		 <li>After this they move down a line and start again</li>
+	 </ul>
+	 
+	 <div id="inlineAnimation">
+		<div id="box1" class="inlineBox"></div>
+		<div id="box2" class="inlineBox"></div>
+		<div id="box3" class="inlineBox"></div>
+		<div id="box4" class="inlineBox"></div>
+		<div id="box5" class="inlineBox"></div>
+	 </div>
+	 
+	 </section>
+     
+    </div>
+	
+	<div class="slide normal"> 
+     
+     <section class="content"> 
+		<span class="slideStatement">These are called "inline" elements, because they move in a line </span><br/>
+		
+		<header><h1>Examples</h1></header> <br/>
+		<img src="images/inline1.png" width="100%"/>
+     </section>
+    </div>
+    
+	
+	<div class="slide normal"> 
+		 <header><h1>Inline Element Continued</h1></header> 
+		 <section class="content"> 
+			<ul>
+				<li>Used for text content mostly</li>
+				<li>Will be as wide as the text it contains</li>
+				<img src="images/boldText.png"/><br/><br/>
+				<b style="background:red">some text</b>
+				<br/>
+				<br/>
+				<li>Cannot apply size ( width &amp height )</li>
+				<li>Cannot apply margins (top &amp bottom )</li>
+				<li>Can apply padding to left and right also</li>
+			</ul>
+		 </section>
+    </div>
+	
+	    <div class="slide normal"> 
+			 <header><h1>Block Types</h1></header> 
+			 <section class="content"> 
+				 <ul class="slideStatement">
+					 <li>These elements fall onto the page just like words in a book again (from the top down)</li>
+					 <li>They take up the as much width as they can!!</li>
+					 <li>They start at the top left and any other element that comes after them, must start on the next line</li>
+				 </ul>
+				 
+				 <div id="blockAnimation">
+					<div id="block1" class="blockBox"></div>
+					<div id="block2" class="blockBox"></div>
+					<div id="block3" class="blockBox"></div>
+					<div id="block4" class="blockBox"></div>
+				 </div>
+			 </section>
+		</div>
+	
+	    <div class="slide normal"> 
+			 <header><h1>Some Examples</h1></header> 
+			 <section class="content"> 
+			 <img src="images/block_examples.png" />
+			 </section>
+			</div>
+			
+		
+		<div class="slide normal"> 
+			<header><h1>Block elements continued
+			</h1></header> 
+			<section class="content"> 
+				<ul class="slideStatement">
+				<li>Used for holding a specific piece of information</li>
+				e.g. a paragraph of text or a heading<br/>
+				<li>Can give it a width and a height</li><br/>
+				<li>If no height is given, as high as the elements inside it </li><br/>
+				<li>If no width is given, as wide as the block <span class="underline">IT</span> is inside </li><br/>
+				<li>Can give it margins or padding on all sides</li><br/>
+			</ul>
+			</section>
+		</div>
+	
+		<div class="slide normal"> 
+		<header><h1>So how to divide up the page??</h1></header> 
+			<section class="content"> 
+			<ul class="slideStatement">
+				<li>Since block elements can be changed by giving them a width and a height, they are very useful for making up the design of your page!</li><br/>
+				<li>Block elements usually have a meaning given to them, such as the purpose of &ltp&gt is for paragraphs and &lth1&gt is for headings</li><br/>
+				<li>If we want a block to use just for organising our pages layout that has no other special meaning, we use the &ltDIV&gt tag</li><br/>
+			</ul>
+			</section>
+		</div>
+	
+		<div class="slide normal"> 
+		<header><h1>What is a div tag?</h1></header> 
+		<h2 class="figCaption">Like most other HTML elements, it has an opening and a closing tag
+			<br/><br/>
+			<img src="images/div1.png"/>
+		</h2>
+	
+	<section class="content"> 
+		<ul>
+		<li>Just a block element!</li>
+		<li>Useful for dividing up your page into sections</li>
+		<li>A way to group together these sections</li>
+		</ul>
+     </section>
+	 
+    </div>
+  
+    <div class="slide normal"> 
+		 <header><h1>Nesting</h1></header> 
+		 <section class="content"> 
+			 <div id="outerBoxAnim">
+				<div id="outerBox" style="padding:20px;height:400px;background:yellow">
+				<h1>Outside Box</h1>
+					<div style="height:50%;background:red">
+						<h1>Inside Box</h1>
+					</div>
+				</div>
+				
+				<div id="animImage"><img src="images/nestedDiv.png"/></div>
+			</div>
+		 </section>
+    </div>
+    
+    <div class="slide normal"> 
+     <header>Div continued</header> 
+	 <h1>Whatever size the outside Box changes, the inside ones have to change also</h1>
+     <section class="content"> 
+		<div id="outerBox" style="padding:20px;height:400px;background:yellow;color:black">
+				<h1>Outside Box</h1>
+					<div style="height:40%;background:orange">
+						<h2 style="display:inline">width: 100%</h2>
+						<h2 style="display:inline">height: 40%</h2>
+					</div>
+					<div style="height:80px;width:500px;background:lightgreen">
+						<h2 style="display:inline">width: 500px</h2>
+						<h2 style="display:inline">height: 80px</h2>
+					</div>
+				</div>
+				
+		<h1 style="position:fixed; bottom: 40px">Unless we give it a specific width or height using pixels!</h1>
+     </section>
+    </div>
+    
+    
+    <div class="slide normal"> 
+     <header><h1>You can nest as many divs as you like!</h1></header> 
+     <section class="content"> 
+		<div id="outerBox3" style="padding:20px;height:400px;background:yellow;">
+				<h1></h1>
+					<div style="height:80%;background:orange">
+						<div style="height:50%;background:red">
+						
+						<div style="height:50%;width:30%;float:right;background:grey">
+							<div style="height:50%;width:60%;background:black">
+							
+						</div>
+						</div>
+						<div style="height:50%;width:50%;background:blue">
+							<div style="height:50%;width:50%;background:lightgreen">
+							
+						</div>
+						</div>
+					</div>
+					<div style="height:20%;width:50%;background:purple;margin:20 auto;">
+						<div style="height:40%;background:cream">
+						</div>
+						<div style="height:20%;width:60%;background:lightblue">
+						</div>
+					</div>
+				</div>
+		
+     </section>
+    </div>
+    
+   
+    
+    
+    
+    <div class="slide normal"> 
+     <header><h1>Positioning Div elements</h1></header> 
+     <section class="content"> 
+		<h1>When you resize the div element it still goes to the top left!</h1>
+		
+		<h1>We'll look at how to position these soon...</h1>
+		
+		<h1> For now, let's play around with &ltDiv&gt width &amp nesting</h1>
+
+     </section>
+    </div>
+   
+   
+   </div>
+   
+  </div>
+  
+  <script>
+  (function() {
+  var doc = document;
+  var disableBuilds = true;
+
+  var ctr = 0;
+  var spaces = /\s+/, a1 = [''];
+
+  var toArray = function(list) {
+    return Array.prototype.slice.call(list || [], 0);
+  };
+
+  var byId = function(id) {
+    if (typeof id == 'string') { return doc.getElementById(id); }
+    return id;
+  };
+
+  var query = function(query, root) {
+    if (!query) { return []; }
+    if (typeof query != 'string') { return toArray(query); }
+    if (typeof root == 'string') {
+      root = byId(root);
+      if(!root){ return []; }
+    }
+
+    root = root || document;
+    var rootIsDoc = (root.nodeType == 9);
+    var doc = rootIsDoc ? root : (root.ownerDocument || document);
+
+    // rewrite the query to be ID rooted
+    if (!rootIsDoc || ('>~+'.indexOf(query.charAt(0)) >= 0)) {
+      root.id = root.id || ('qUnique' + (ctr++));
+      query = '#' + root.id + ' ' + query;
+    }
+    // don't choke on something like ".yada.yada >"
+    if ('>~+'.indexOf(query.slice(-1)) >= 0) { query += ' *'; }
+
+    return toArray(doc.querySelectorAll(query));
+  };
+
+  var strToArray = function(s) {
+    if (typeof s == 'string' || s instanceof String) {
+      if (s.indexOf(' ') < 0) {
+        a1[0] = s;
+        return a1;
+      } else {
+        return s.split(spaces);
+      }
+    }
+    return s;
+  };
+
+  var addClass = function(node, classStr) {
+    classStr = strToArray(classStr);
+    var cls = ' ' + node.className + ' ';
+    for (var i = 0, len = classStr.length, c; i < len; ++i) {
+      c = classStr[i];
+      if (c && cls.indexOf(' ' + c + ' ') < 0) {
+        cls += c + ' ';
+      }
+    }
+    node.className = cls.trim();
+  };
+
+  var removeClass = function(node, classStr) {
+    var cls;
+    if (classStr !== undefined) {
+      classStr = strToArray(classStr);
+      cls = ' ' + node.className + ' ';
+      for (var i = 0, len = classStr.length; i < len; ++i) {
+        cls = cls.replace(' ' + classStr[i] + ' ', ' ');
+      }
+      cls = cls.trim();
+    } else {
+      cls = '';
+    }
+    if (node.className != cls) {
+      node.className = cls;
+    }
+  };
+
+  var toggleClass = function(node, classStr) {
+    var cls = ' ' + node.className + ' ';
+    if (cls.indexOf(' ' + classStr.trim() + ' ') >= 0) {
+      removeClass(node, classStr);
+    } else {
+      addClass(node, classStr);
+    }
+  };
+
+  var ua = navigator.userAgent;
+  var isFF = parseFloat(ua.split('Firefox/')[1]) || undefined;
+  var isWK = parseFloat(ua.split('WebKit/')[1]) || undefined;
+  var isOpera = parseFloat(ua.split('Opera/')[1]) || undefined;
+
+  var canTransition = (function() {
+  var ver = parseFloat(ua.split('Version/')[1]) || undefined;
+  // test to determine if this browser can handle CSS transitions.
+  var cachedCanTransition = 
+    (isWK || (isFF && isFF > 3.6 ) || (isOpera && ver >= 10.5));
+    return function() { return cachedCanTransition; }
+  })();
+
+  //
+  // Slide class
+  //
+  var Slide = function(node, idx) {
+    this._node = node;
+    if (idx >= 0) {
+      this._count = idx + 1;
+    }
+    if (this._node) {
+      addClass(this._node, 'slide distant-slide');
+    }
+    this._makeCounter();
+    this._makeBuildList();
+  };
+
+  Slide.prototype = {
+    _node: null,
+    _count: 0,
+    _buildList: [],
+    _visited: false,
+    _currentState: '',
+    _states: [ 'distant-slide', 'far-past',
+               'past', 'current', 'future',
+               'far-future', 'distant-slide' ],
+    setState: function(state) {
+      if (typeof state != 'string') {
+        state = this._states[state];
+      }
+      if (state == 'current' && !this._visited) {
+        this._visited = true;
+        this._makeBuildList();
+      }
+      removeClass(this._node, this._states);
+      addClass(this._node, state);
+      this._currentState = state;
+
+      // delay first auto run. Really wish this were in CSS.
+      /*
+      this._runAutos();
+      */
+      var _t = this;
+      setTimeout(function(){ _t._runAutos(); } , 400);
+    },
+    _makeCounter: function() {
+      if(!this._count || !this._node) { return; }
+      var c = doc.createElement('span');
+      c.innerHTML = this._count;
+      c.className = 'counter';
+      this._node.appendChild(c);
+    },
+    _makeBuildList: function() {
+      this._buildList = [];
+      if (disableBuilds) { return; }
+      if (this._node) {
+        this._buildList = query('[data-build] > *', this._node);
+      }
+      this._buildList.forEach(function(el) {
+        addClass(el, 'to-build');
+      });
+    },
+    _runAutos: function() {
+      if (this._currentState != 'current') {
+        return;
+      }
+      // find the next auto, slice it out of the list, and run it
+      var idx = -1;
+      this._buildList.some(function(n, i) {
+        if (n.hasAttribute('data-auto')) {
+          idx = i;
+          return true;
+        }
+        return false;
+      });
+      if (idx >= 0) {
+        var elem = this._buildList.splice(idx, 1)[0];
+        var transitionEnd = isWK ? 'webkitTransitionEnd' : (isFF ? 'mozTransitionEnd' : 'oTransitionEnd');
+        var _t = this;
+        if (canTransition()) {
+          var l = function(evt) {
+            elem.parentNode.removeEventListener(transitionEnd, l, false);
+            _t._runAutos();
+          };
+          elem.parentNode.addEventListener(transitionEnd, l, false);
+          removeClass(elem, 'to-build');
+        } else {
+          setTimeout(function() {
+            removeClass(elem, 'to-build');
+            _t._runAutos();
+          }, 400);
+        }
+      }
+    },
+    buildNext: function() {
+      if (!this._buildList.length) {
+        return false;
+      }
+      removeClass(this._buildList.shift(), 'to-build');
+      return true;
+    },
+  };
+
+  //
+  // SlideShow class
+  //
+  var SlideShow = function(slides) {
+    this._slides = (slides || []).map(function(el, idx) {
+      return new Slide(el, idx);
+    });
+
+    var h = window.location.hash;
+    try {
+      this.current = parseInt(h.split('#slide')[1], 10);
+    }catch (e) { /* squeltch */ }
+    this.current = isNaN(this.current) ? 1 : this.current;
+    var _t = this;
+    doc.addEventListener('keydown', 
+        function(e) { _t.handleKeys(e); }, false);
+    doc.addEventListener('mousewheel', 
+        function(e) { _t.handleWheel(e); }, false);
+    doc.addEventListener('DOMMouseScroll', 
+        function(e) { _t.handleWheel(e); }, false);
+    doc.addEventListener('touchstart', 
+        function(e) { _t.handleTouchStart(e); }, false);
+    doc.addEventListener('touchend', 
+        function(e) { _t.handleTouchEnd(e); }, false);
+    window.addEventListener('popstate',
+        function(e) { _t.go(e.state); }, false);
+    this._update();
+  };
+
+  SlideShow.prototype = {
+    _slides: [],
+    _update: function(dontPush) {
+      document.querySelector('#presentation-counter').innerText = this.current;
+      if (history.pushState) {
+        if (!dontPush) {
+          history.pushState(this.current, 'Slide ' + this.current, '#slide' + this.current);
+        }
+      } else {
+        window.location.hash = 'slide' + this.current;
+      }
+      for (var x = this.current-1; x < this.current + 7; x++) {
+        if (this._slides[x-4]) {
+          this._slides[x-4].setState(Math.max(0, x-this.current));
+        }
+      }
+    },
+
+    current: 0,
+    next: function() {
+      if (!this._slides[this.current-1].buildNext()) {
+        this.current = Math.min(this.current + 1, this._slides.length);
+        this._update();
+      }
+    },
+    prev: function() {
+      this.current = Math.max(this.current-1, 1);
+      this._update();
+    },
+    go: function(num) {
+      if (!num) return;
+      if (history.pushState && this.current != num) {
+        history.replaceState(this.current, 'Slide ' + this.current, '#slide' + this.current);
+      }
+      this.current = num;
+      this._update(true);
+    },
+
+    _notesOn: false,
+    showNotes: function() {
+      var isOn = this._notesOn = !this._notesOn;
+      query('.notes').forEach(function(el) {
+        el.style.display = (notesOn) ? 'block' : 'none';
+      });
+    },
+    switch3D: function() {
+      toggleClass(document.body, 'three-d');
+    },
+    handleWheel: function(e) {
+      var delta = 0;
+      if (e.wheelDelta) {
+        delta = e.wheelDelta/120;
+        if (isOpera) {
+          delta = -delta;
+        }
+      } else if (e.detail) {
+        delta = -e.detail/3;
+      }
+
+      if (delta > 0 ) {
+        this.prev();
+        return;
+      }
+      if (delta < 0 ) {
+        this.next();
+        return;
+      }
+    },
+    handleKeys: function(e) {
+      
+      if (/^(input|textarea)$/i.test(e.target.nodeName)) return;
+      
+      switch (e.keyCode) {
+        case 37: // left arrow
+          this.prev(); break;
+        case 39: // right arrow
+        case 32: // space
+          this.next(); break;
+        case 50: // 2
+          this.showNotes(); break;
+        case 51: // 3
+          this.switch3D(); break;
+      }
+    },
+    _touchStartX: 0,
+    handleTouchStart: function(e) {
+      this._touchStartX = e.touches[0].pageX;
+    },
+    handleTouchEnd: function(e) {
+      var delta = this._touchStartX - e.changedTouches[0].pageX;
+      var SWIPE_SIZE = 150;
+      if (delta > SWIPE_SIZE) {
+        this.next();
+      } else if (delta< -SWIPE_SIZE) {
+         this.prev();
+       }
+    },
+  };
+
+  // Initialize
+  var slideshow = new SlideShow(query('.slide'));
+})();
+
+  </script>
+  <!--[if lt IE 9]>
+  <script 
+  src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({ mode: "overlay" });</script>
+  <![endif]--> 
+  </body> 
+</html>

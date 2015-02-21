@@ -1,0 +1,11 @@
+More basic HTML tags explained and introduction to CSS elements using the <style> tag. (Will look at creating a seperate CSS file in week 3).
+
+Tag attributes.
+
+Creating lists using the <ol> and <ul> tags, including <li> tags.
+
+Creating a table using <table> tags including <tr> and <td>
+
+Formatting text using <em>, <strong> and <u> tags
+
+Inline vs Block elements.

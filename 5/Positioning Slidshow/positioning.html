@@ -1,0 +1,611 @@
+﻿<html> 
+  <head> 
+    <meta charset="utf-8" />
+    <title>Lesson: HTML/CSS Day 1</title>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Tangerine" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" rel="stylesheet" type="text/css" media="projection, screen"/>
+ 
+  </head> 
+  <body> 
+  
+  <div id="info">
+    <p>Press <span class="key">&rarr;</span> key to advance. Zoom in/out: <span class="key">Ctrl or Command</span> + <span class="key">+/-</span>. </p>
+  </div>
+  
+  <div id="presentation">
+  
+   <div id="presentation-counter"></div>
+      
+   <div id="slides">
+   
+    
+    
+    <div class="slide section"> 
+     <header><h1>HTML</h1></header>
+	 <h4>Positioning Elements with CSS</h4>
+    </div> 
+   
+
+    <div class="slide normal"> 
+     <header><h1>Areas of a web page</h1></header> 
+     <section class="content"> 
+		  <h1 class="slideStatement center">Recap from last week!</h1>
+				<ul class="listItems2" >
+					<li><b>Block Elements</b>
+						<ul>
+							<li>Can change size</li>
+							<li>Can apply padding and Margins</li>
+							<li>Takes up the whole width of it's containing element</li>
+							<li>Starts with a height of 0px!</li>
+						</ul>
+					</li>
+					<li><b>Inline Elements</b></li>
+						<ul>
+							<li>Used mostly for text</li>
+							<li>Can't resize</li>
+							<li>Margins and Padding are limited</li>
+							<li>Takes up as much space as whatever is inside it needs</li>
+							<li>Starts with a height and width of 0px if nothing is inside it!</li>
+						</ul>
+				</ul>
+     </section>
+    </div>
+	
+	    <div class="slide normal"> 
+     <header><h1>Positioning elements</h1></header> 
+     <section class="content">
+		<span class="slideStatement">Today we look at how to position elements in your page</span>
+		
+		<div id="sectionExample">
+				<div id="headingExample">Heading</div>
+				<div id="bodyExample">
+					<div id="columnExample">
+						<span>home</span><br/><br/>
+						<span>about</span><br/><br/>
+						<span>examples</span><br/><br/>
+						<span>photos</span><br/><br/>
+					</div>
+					<div id="contentExample">
+						<div class="slideStatement center">My Home page!</div>
+					</div>
+				</div>
+			
+			</div>
+		
+	 </section>
+    </div>
+	
+	<div class="slide normal"> 
+     <header><h1>Position Types</h1></header> 
+	  <section class="content"> 
+	 <span class="slideStatement">There are <u>4</u> types of positioning we can do with CSS</span>
+	 
+	 <ul class="listItems">
+		<li>Static
+			<ul class="listItems2"><li>Browser default</li></ul>
+		</li>
+		<li>Relative
+			<ul class="listItems2"><li>Changes it's position based on it's default</li></ul>
+		</li>
+		<li>Absolute
+			<ul class="listItems2"><li>Changes it's position based on it's parent element</li></ul>
+		</li>
+		<li>Fixed
+			<ul class="listItems2"><li>Takes it's position from the browser window</li></ul>
+		</li>
+	 </ul>
+	 </section>
+     
+    </div>
+	
+	<div class="slide normal"> 
+     <header><h1>Static Positioning</h1></header> 
+     <section class="content"> 
+		<ul>
+		<li>It's position it given by the browser</li>
+		<li>Cannot be changed</li>
+		<li>Not very useful, but good to know about when using absolute positioning.</li>
+		</ul>
+		<br/>
+	 <div style="height: 100%; position: relative">
+		<div id="inlineAnimation" style="position:absolute; left: 40px;">
+			<div id="box1" class="inlineBox"></div>
+			<div id="box2" class="inlineBox"></div>
+			<div id="box3" class="inlineBox"></div>
+			<div id="box4" class="inlineBox"></div>
+			<div id="box5" class="inlineBox"></div>
+		 </div>
+		 
+		<div id="blockAnimation" style="position:absolute; right: 40px";>
+			<div id="block1" class="blockBox"></div>
+			<div id="block2" class="blockBox"></div>
+			<div id="block3" class="blockBox"></div>
+			<div id="block4" class="blockBox"></div>
+		</div>
+		</div>
+	 </div>
+     </section>
+    </div>
+    
+	
+	<div class="slide normal"> 
+		 <header><h1>Relative positioning</h1></header> 
+		 <section class="content"> 
+			<ul>
+				<li>The browser moves the element based on it original position</li>
+				<li>use <span style="font-family:consolas;color:grey">position:<span style="color:black">relative; </span></span>in css for element</li>
+				
+			</ul>
+			<div style="position:relative; height: 600px;">
+				<div id="inlineAnimation" style="position: absolute; left: 50px; bottom: 150px;">
+					<div id="relative_box" class="rel_Box"></div>
+				</div>
+				<div class="keyFrame10 text_anim" style="position:absolute;left:100px;bottom:125px;width:80px;">
+				<span class="positionFlash">Left: 70px;</span>
+				</div>
+				
+				<div class="keyFrame10 arrow_move"><img src="images/arrow.png"/></div>
+				
+				<div style="width:300px; position:absolute; right: 50px; top: 150px;">
+					<div class="keyFrame5 text_anim">Get it's current position</div>
+					<div class="keyFrame10 text_anim">Get the position changes needed</div>
+					<div class="keyFrame15 text_anim">Move it from it's original position by that amount</div>
+				</div>
+			</div>
+		 </section>
+    </div>
+	
+	    <div class="slide normal"> 
+			 <header><h1>Absolute Position</h1></header> 
+			 <section class="content"> 
+				 <ul>
+					 <li>The browser moves the element based on the parent element it is inside</li>
+					<li>use <span style="font-family:consolas;color:grey">position:<span style="color:black">absolute; </span></span>in css for element</li>
+				 </ul>
+				 
+				 <div style="position:relative; height: 600px;">
+				 <div style="background:orange;border: solid 5px black; height: 500px; width: 500px;">
+				 
+					<div id="absoluteAnimation" style="position: absolute; left: 50px; bottom: 150px;">
+						<div id="absolute_box" class="rel_Box"></div>
+					</div>
+				</div>
+					<div class="keyFrame10 text_anim" style="position:absolute;left:100px;bottom:125px;width:80px;">
+					<span class="positionFlash">Bottom: 70px;</span></div>
+					<div class="keyFrame10 text_anim" style="position:absolute;left:190px;bottom:125px;width:80px;">
+					<span class="positionFlash">Left: 70px;</span></div>
+					
+					<div style="width:300px; position:absolute; right: 50px; top: 100px;">
+						<div class="keyFrame5 text_anim">Check the position of the parent Element</div>
+						<div class="keyFrame10 text_anim">Get the position changes needed</div>
+						<div class="keyFrame15 text_anim">Move it from it's parent's position by that amount</div>
+					</div>
+			</div>
+				 
+			 </section>
+		</div>
+	
+	    <div class="slide normal"> 
+			 <header><h1>Note about Absolute position </h1></header> 
+			 <section class="content"> 
+				<ul>
+				 <li>Absolute positioning look for the parent whose position is not static</li>
+				 <li>Remember all elements are <span style="font-family:consolas;color:grey">position:<span style="color:black">static </span></span>by default</li>
+				 <li>If none of it's parent have a position set, then it will use the &lt;html&gt; tag (window)</li>
+				</ul>
+				
+				<div style="position:relative; height: 600px;">
+				 <div id="absoluteAnimation2" style="background:orange;border: solid 5px black; height: 400px; width: 500px;position:absolute">
+				 
+					<div id="absoluteAnimation" style="position: absolute; left: 50px; top: 60px;">
+						<div id="absolute_box2" class="rel_Box"></div>
+					</div>
+				</div>
+					<div class="keyFrame15 text_anim" style="position:absolute;left:100px;bottom:125px;width:80px;">
+					<span class="positionFlash">Bottom: 70px;</span></div>
+					<div class="keyFrame15 text_anim" style="position:absolute;left:190px;bottom:125px;width:80px;">
+					<span class="positionFlash">Left: 70px;</span></div>
+					
+					<div style="width:300px; position:absolute; right: 50px; top: 100px;">
+						<div class="keyFrame5 text_anim">Check the position of the parent Element</div>
+						<div class="keyFrame10 text_anim">If no position set, check the position of the next parent Element</div>
+						<div class="keyFrame15 text_anim">Get the position changes needed</div>
+						<div class="keyFrame20 text_anim">Move it from it's parent's position by that amount</div>
+					</div>
+			</div>
+			 </section>
+			</div>
+			
+		
+		<div class="slide normal"> 
+			<header><h1>Fixed Positioning
+			</h1></header> 
+			<section class="content"> 
+				<ul>
+				 <li>Fixed positioning places the element using the window available</li>
+				 <li>Use <span style="font-family:consolas;color:grey">position:<span style="color:black">fixed; </span></span> in CSS</li>
+				 <li>Position will not change, even if you scroll!!!</li>
+				</ul>
+				
+				<div style="position:relative; height: 600px;">
+					<div id="fixedAnimation">
+						<div id="text_scroll" >
+								Pellentesque nibh orci, sodales eget erat eu, dignissim dictum felis. Praesent ac augue mollis, porttitor nisi vitae, consectetur ex. Praesent hendrerit diam augue, vel luctus mauris ultrices eget. Integer eleifend eros sed lorem tristique pharetra. Nam vitae ullamcorper libero, et eleifend nisl. Nullam tristique nunc nisi, nec luctus massa elementum non. Phasellus sit amet eleifend quam. Proin pulvinar porttitor maximus. Sed eget dui ultricies, cursus ligula et, sagittis ipsum. Cras cursus felis vitae ultrices aliquam. Aliquam nec arcu in nibh lacinia hendrerit. Mauris nisi purus, posuere sit amet dui ut, hendrerit sollicitudin ante.
+						</div>
+						<div id="fixed_box" class="rel_Box"></div>
+					</div>
+					
+					<div class="keyFrame10 text_anim positionFlash" style="position:absolute;left:100px;bottom:125px;width:80px;">
+					<span class="positionFlash">Right: 70px;</span></div>
+					<div class="keyFrame10 text_anim positionFlash" style="position:absolute;left:190px;bottom:125px;width:80px;">
+					<span class="positionFlash">Top: 70px;</span></div>
+					
+					<div style="width:300px; position:absolute; right: 50px; top: 150px;">
+						<div class="keyFrame5 text_anim">Get the position of the Window</div>
+						<div class="keyFrame10 text_anim">Get the position changes needed</div>
+						<div class="keyFrame15 text_anim">Move it from the window position by that amount</div>
+					</div>
+				</div>
+			</ul>
+			</section>
+		</div>
+
+    <div class="slide normal"> 
+     <header><h1>Time to Code!!</h1></header> 
+     <section class="content"> 
+		<h1>Let's make a couple of boxes and play around with the positions!</h1>
+		<br/>
+		<h1><u>We'll start with the basic starting code as always</u></h1>
+
+     </section>
+    </div>
+   
+   
+   </div>
+   
+  </div>
+  
+  <script>
+  (function() {
+  var doc = document;
+  var disableBuilds = true;
+
+  var ctr = 0;
+  var spaces = /\s+/, a1 = [''];
+
+  var toArray = function(list) {
+    return Array.prototype.slice.call(list || [], 0);
+  };
+
+  var byId = function(id) {
+    if (typeof id == 'string') { return doc.getElementById(id); }
+    return id;
+  };
+
+  var query = function(query, root) {
+    if (!query) { return []; }
+    if (typeof query != 'string') { return toArray(query); }
+    if (typeof root == 'string') {
+      root = byId(root);
+      if(!root){ return []; }
+    }
+
+    root = root || document;
+    var rootIsDoc = (root.nodeType == 9);
+    var doc = rootIsDoc ? root : (root.ownerDocument || document);
+
+    // rewrite the query to be ID rooted
+    if (!rootIsDoc || ('>~+'.indexOf(query.charAt(0)) >= 0)) {
+      root.id = root.id || ('qUnique' + (ctr++));
+      query = '#' + root.id + ' ' + query;
+    }
+    // don't choke on something like ".yada.yada >"
+    if ('>~+'.indexOf(query.slice(-1)) >= 0) { query += ' *'; }
+
+    return toArray(doc.querySelectorAll(query));
+  };
+
+  var strToArray = function(s) {
+    if (typeof s == 'string' || s instanceof String) {
+      if (s.indexOf(' ') < 0) {
+        a1[0] = s;
+        return a1;
+      } else {
+        return s.split(spaces);
+      }
+    }
+    return s;
+  };
+
+  var addClass = function(node, classStr) {
+    classStr = strToArray(classStr);
+    var cls = ' ' + node.className + ' ';
+    for (var i = 0, len = classStr.length, c; i < len; ++i) {
+      c = classStr[i];
+      if (c && cls.indexOf(' ' + c + ' ') < 0) {
+        cls += c + ' ';
+      }
+    }
+    node.className = cls.trim();
+  };
+
+  var removeClass = function(node, classStr) {
+    var cls;
+    if (classStr !== undefined) {
+      classStr = strToArray(classStr);
+      cls = ' ' + node.className + ' ';
+      for (var i = 0, len = classStr.length; i < len; ++i) {
+        cls = cls.replace(' ' + classStr[i] + ' ', ' ');
+      }
+      cls = cls.trim();
+    } else {
+      cls = '';
+    }
+    if (node.className != cls) {
+      node.className = cls;
+    }
+  };
+
+  var toggleClass = function(node, classStr) {
+    var cls = ' ' + node.className + ' ';
+    if (cls.indexOf(' ' + classStr.trim() + ' ') >= 0) {
+      removeClass(node, classStr);
+    } else {
+      addClass(node, classStr);
+    }
+  };
+
+  var ua = navigator.userAgent;
+  var isFF = parseFloat(ua.split('Firefox/')[1]) || undefined;
+  var isWK = parseFloat(ua.split('WebKit/')[1]) || undefined;
+  var isOpera = parseFloat(ua.split('Opera/')[1]) || undefined;
+
+  var canTransition = (function() {
+  var ver = parseFloat(ua.split('Version/')[1]) || undefined;
+  // test to determine if this browser can handle CSS transitions.
+  var cachedCanTransition = 
+    (isWK || (isFF && isFF > 3.6 ) || (isOpera && ver >= 10.5));
+    return function() { return cachedCanTransition; }
+  })();
+
+  //
+  // Slide class
+  //
+  var Slide = function(node, idx) {
+    this._node = node;
+    if (idx >= 0) {
+      this._count = idx + 1;
+    }
+    if (this._node) {
+      addClass(this._node, 'slide distant-slide');
+    }
+    this._makeCounter();
+    this._makeBuildList();
+  };
+
+  Slide.prototype = {
+    _node: null,
+    _count: 0,
+    _buildList: [],
+    _visited: false,
+    _currentState: '',
+    _states: [ 'distant-slide', 'far-past',
+               'past', 'current', 'future',
+               'far-future', 'distant-slide' ],
+    setState: function(state) {
+      if (typeof state != 'string') {
+        state = this._states[state];
+      }
+      if (state == 'current' && !this._visited) {
+        this._visited = true;
+        this._makeBuildList();
+      }
+      removeClass(this._node, this._states);
+      addClass(this._node, state);
+      this._currentState = state;
+
+      // delay first auto run. Really wish this were in CSS.
+      /*
+      this._runAutos();
+      */
+      var _t = this;
+      setTimeout(function(){ _t._runAutos(); } , 400);
+    },
+    _makeCounter: function() {
+      if(!this._count || !this._node) { return; }
+      var c = doc.createElement('span');
+      c.innerHTML = this._count;
+      c.className = 'counter';
+      this._node.appendChild(c);
+    },
+    _makeBuildList: function() {
+      this._buildList = [];
+      if (disableBuilds) { return; }
+      if (this._node) {
+        this._buildList = query('[data-build] > *', this._node);
+      }
+      this._buildList.forEach(function(el) {
+        addClass(el, 'to-build');
+      });
+    },
+    _runAutos: function() {
+      if (this._currentState != 'current') {
+        return;
+      }
+      // find the next auto, slice it out of the list, and run it
+      var idx = -1;
+      this._buildList.some(function(n, i) {
+        if (n.hasAttribute('data-auto')) {
+          idx = i;
+          return true;
+        }
+        return false;
+      });
+      if (idx >= 0) {
+        var elem = this._buildList.splice(idx, 1)[0];
+        var transitionEnd = isWK ? 'webkitTransitionEnd' : (isFF ? 'mozTransitionEnd' : 'oTransitionEnd');
+        var _t = this;
+        if (canTransition()) {
+          var l = function(evt) {
+            elem.parentNode.removeEventListener(transitionEnd, l, false);
+            _t._runAutos();
+          };
+          elem.parentNode.addEventListener(transitionEnd, l, false);
+          removeClass(elem, 'to-build');
+        } else {
+          setTimeout(function() {
+            removeClass(elem, 'to-build');
+            _t._runAutos();
+          }, 400);
+        }
+      }
+    },
+    buildNext: function() {
+      if (!this._buildList.length) {
+        return false;
+      }
+      removeClass(this._buildList.shift(), 'to-build');
+      return true;
+    },
+  };
+
+  //
+  // SlideShow class
+  //
+  var SlideShow = function(slides) {
+    this._slides = (slides || []).map(function(el, idx) {
+      return new Slide(el, idx);
+    });
+
+    var h = window.location.hash;
+    try {
+      this.current = parseInt(h.split('#slide')[1], 10);
+    }catch (e) { /* squeltch */ }
+    this.current = isNaN(this.current) ? 1 : this.current;
+    var _t = this;
+    doc.addEventListener('keydown', 
+        function(e) { _t.handleKeys(e); }, false);
+    doc.addEventListener('mousewheel', 
+        function(e) { _t.handleWheel(e); }, false);
+    doc.addEventListener('DOMMouseScroll', 
+        function(e) { _t.handleWheel(e); }, false);
+    doc.addEventListener('touchstart', 
+        function(e) { _t.handleTouchStart(e); }, false);
+    doc.addEventListener('touchend', 
+        function(e) { _t.handleTouchEnd(e); }, false);
+    window.addEventListener('popstate',
+        function(e) { _t.go(e.state); }, false);
+    this._update();
+  };
+
+  SlideShow.prototype = {
+    _slides: [],
+    _update: function(dontPush) {
+      document.querySelector('#presentation-counter').innerText = this.current;
+      if (history.pushState) {
+        if (!dontPush) {
+          history.pushState(this.current, 'Slide ' + this.current, '#slide' + this.current);
+        }
+      } else {
+        window.location.hash = 'slide' + this.current;
+      }
+      for (var x = this.current-1; x < this.current + 7; x++) {
+        if (this._slides[x-4]) {
+          this._slides[x-4].setState(Math.max(0, x-this.current));
+        }
+      }
+    },
+
+    current: 0,
+    next: function() {
+      if (!this._slides[this.current-1].buildNext()) {
+        this.current = Math.min(this.current + 1, this._slides.length);
+        this._update();
+      }
+    },
+    prev: function() {
+      this.current = Math.max(this.current-1, 1);
+      this._update();
+    },
+    go: function(num) {
+      if (!num) return;
+      if (history.pushState && this.current != num) {
+        history.replaceState(this.current, 'Slide ' + this.current, '#slide' + this.current);
+      }
+      this.current = num;
+      this._update(true);
+    },
+
+    _notesOn: false,
+    showNotes: function() {
+      var isOn = this._notesOn = !this._notesOn;
+      query('.notes').forEach(function(el) {
+        el.style.display = (notesOn) ? 'block' : 'none';
+      });
+    },
+    switch3D: function() {
+      toggleClass(document.body, 'three-d');
+    },
+    handleWheel: function(e) {
+      var delta = 0;
+      if (e.wheelDelta) {
+        delta = e.wheelDelta/120;
+        if (isOpera) {
+          delta = -delta;
+        }
+      } else if (e.detail) {
+        delta = -e.detail/3;
+      }
+
+      if (delta > 0 ) {
+        this.prev();
+        return;
+      }
+      if (delta < 0 ) {
+        this.next();
+        return;
+      }
+    },
+    handleKeys: function(e) {
+      
+      if (/^(input|textarea)$/i.test(e.target.nodeName)) return;
+      
+      switch (e.keyCode) {
+        case 37: // left arrow
+          this.prev(); break;
+        case 39: // right arrow
+        case 32: // space
+          this.next(); break;
+        case 50: // 2
+          this.showNotes(); break;
+        case 51: // 3
+          this.switch3D(); break;
+      }
+    },
+    _touchStartX: 0,
+    handleTouchStart: function(e) {
+      this._touchStartX = e.touches[0].pageX;
+    },
+    handleTouchEnd: function(e) {
+      var delta = this._touchStartX - e.changedTouches[0].pageX;
+      var SWIPE_SIZE = 150;
+      if (delta > SWIPE_SIZE) {
+        this.next();
+      } else if (delta< -SWIPE_SIZE) {
+         this.prev();
+       }
+    },
+  };
+
+  // Initialize
+  var slideshow = new SlideShow(query('.slide'));
+})();
+
+  </script>
+  <!--[if lt IE 9]>
+  <script 
+  src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({ mode: "overlay" });</script>
+  <![endif]--> 
+  </body> 
+</html>

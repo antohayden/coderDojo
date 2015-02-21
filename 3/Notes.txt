@@ -1,0 +1,14 @@
+This class should take a step back from learning specific tags and looks at the CSS side of things.
+
+This will include:
+
+Moving from using style tags to a seperate CSS file.
+Learning about parent child relationship between tags.
+Block vs Inline elements.
+Tag attributes.
+CSS classes, ids and tag names.
+
+If time permits, color values(hex/rgb)/block element sizes(height and width px / %).
+
+This class will allow the next class of layout using the <div> tag easier.
+
